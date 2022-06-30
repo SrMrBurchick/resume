@@ -41,6 +41,7 @@ html, body {
 .left-side {
     grid-column: 1 / 2;
     position: relative;
+    min-width: 400px;
 }
 
 .profile {
@@ -73,7 +74,7 @@ html, body {
 }
 
 .profile-img {
-    height: 600px;
+    height: 500px;
 }
 
 .profile-line {
@@ -82,4 +83,30 @@ html, body {
     bottom: 0;
     right: 0.75rem;
     border-left: 4px solid #fc8b03;
+}
+
+.left-side ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.left-side ul li {
+    display: flex;
+    color: #fff;
+    background: #050b11;
+    margin: 10px 0;
+    position: relative;
+    width: 100%;
+    font-size: 18px;
+}
+
+.left-side ul li .icon {
+    color: #ffffff;
+    position: relative;
+    margin-right: 15px;
+}
+
+.contacts-data {
+    color: #fc8b03;
+    font-size: 40px;
 }
