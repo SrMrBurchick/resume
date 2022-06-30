@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
 
 .coin {
     background-image: url(./coin.png);
@@ -19,4 +26,60 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.parent {
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+}
+
+.section {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.left-side {
+    grid-column: 1 / 2;
+    position: relative;
+}
+
+.profile {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.profile-background {
+    background-color: #201A26;
+    border: 1px;
+}
+
+.profile-avatar {
+    height: 400px;
+}
+
+.profile-data {
+    color: #FFF;
+    font-size: 60px;
+    word-wrap: break-word;
+    max-width: 12rem;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    background-color: #291F37;
+    padding: 1rem;
+}
+
+.profile-img {
+    height: 600px;
+}
+
+.profile-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0.75rem;
+    border-left: 4px solid #fc8b03;
 }
