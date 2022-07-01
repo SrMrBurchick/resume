@@ -35,7 +35,7 @@ html, body {
 
 .parent {
     display: grid;
-    grid-template: auto 1fr auto / auto 1fr auto;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     background-color: #DCDCDC;
 }
 
@@ -45,24 +45,19 @@ html, body {
 }
 
 .left-side {
-    grid-column: 1 / 2;
     position: relative;
-    min-width: 400px;
+    background-color: #201A26;
 }
 
 .profile {
     display: grid;
-    bottom: 0;
+    margin: auto;
     grid-template-rows: auto 1fr auto;
-}
-
-.profile-background {
-    background-color: #201A26;
-    border: 1px;
+    height: 100%;
 }
 
 .profile-avatar {
-    height: 400px;
+    width: 90%;
 }
 
 .profile-data {
@@ -80,8 +75,18 @@ html, body {
     padding: 1rem;
 }
 
+.profile-mid {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding: 1rem;
+}
+
 .profile-img {
-    height: 500px;
+    width: 100%;
+    height: 100%;
+    min-width: 5rem;
+    max-width: 20rem;
 }
 
 .profile-line {
@@ -119,7 +124,6 @@ html, body {
 }
 
 .main-content {
-    grid-column: 2 / 4;
     background-color: #DCDCDC;
 }
 
@@ -131,12 +135,14 @@ html, body {
     justify-content: space-between;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     background-color: #eee4d8;
+    min-width: 20rem;
 }
 
 .container {
     display: flex;
     align-items: center;
     margin: auto auto;
+    min-width: 20rem;
 }
 
 .card:hover {
@@ -173,9 +179,9 @@ html, body {
 }
 
 .skills-profile {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
 .skills-profile .title {
@@ -207,4 +213,11 @@ html, body {
     height: 200px;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    max-width: 200;
+    margin: auto;
 }
