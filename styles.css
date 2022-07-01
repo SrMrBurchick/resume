@@ -9,16 +9,21 @@ html, body {
 }
 
 .coin {
-    background-image: url(./coin.png);
-    width: 1rem;
-    height: 1rem;
-    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.coin-grayscale {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: grayscale(100%);
 }
 
 .coin-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    height: auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(6, 1rem);
 }
 
 .list-item {
@@ -31,6 +36,7 @@ html, body {
 .parent {
     display: grid;
     grid-template: auto 1fr auto / auto 1fr auto;
+    background-color: #DCDCDC;
 }
 
 .section {
@@ -46,6 +52,7 @@ html, body {
 
 .profile {
     display: grid;
+    bottom: 0;
     grid-template-rows: auto 1fr auto;
 }
 
@@ -109,4 +116,95 @@ html, body {
 .contacts-data {
     color: #fc8b03;
     font-size: 40px;
+}
+
+.main-content {
+    grid-column: 2 / 4;
+    background-color: #DCDCDC;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem 1rem;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #eee4d8;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin: auto auto;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.bold {
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.main-content ul li .date {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.main-content ul li .info {
+    margin-bottom: 20px;
+}
+
+.main-content ul li:last-child .info {
+    margin-bottom: 0;
+}
+
+.semi-bold {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.skills-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.skills-profile .title {
+    color: #fc8b03;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skill-group ul li {
+    line-height: 20%;
+}
+
+.skill-languages {
+    display: flex;
+    width: auto;
+}
+
+.mario {
+    height: 160px;
+}
+
+.bouser {
+    height: 200px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
