@@ -68,11 +68,17 @@ html, body {
     width: 90%;
 }
 
+.data {
+    font-family: Hack;
+    font-size: 24px;
+}
+
 .profile-data {
     color: #FFF;
-    font-size: 60px;
+    font-size: 50px;
     word-wrap: break-word;
     max-width: 12rem;
+    font-family: Hack;
 }
 
 .profile-header {
@@ -129,6 +135,7 @@ html, body {
 .contacts-data {
     color: #fc8b03;
     font-size: 40px;
+    font-family: Hack;
 }
 
 .main-content {
@@ -151,14 +158,19 @@ html, body {
     align-items: center;
     margin: auto auto;
     min-width: 20rem;
+    border-top: 4px solid #fc8b03;
+    border-bottom: 4px solid #fc8b03;
 }
 
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+pre, code { font-family: Hack, monospace; }
+
 .title {
-    margin-bottom: 20px;
+    margin: auto;
+    font-family: Hack;
 }
 
 .bold {
@@ -168,7 +180,7 @@ html, body {
 }
 
 .main-content ul li .date {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 500;
     margin-bottom: 15px;
 }
@@ -183,7 +195,7 @@ html, body {
 
 .semi-bold {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 .skills-profile {
@@ -228,4 +240,49 @@ html, body {
     align-items: center;
     max-width: 200;
     margin: auto;
+}
+
+.animated-progress {
+    min-width: 5rem;
+    height: 2rem;
+    border-radius: 5px;
+    margin: 20px 10px;
+    border: 1px solid rgb(189, 113, 113);
+    overflow: hidden;
+    position: relative;
+}
+
+.animated-progress span {
+    height: 100%;
+    display: block;
+    color: rgb(255, 251, 251);
+    line-height: 30px;
+    position: absolute;
+    text-align: center;
+    padding-right: 5px;
+}
+
+.progress-blue span {
+    font-family: Hack;
+    background-color: #FFBF00;
+}
+.progress-green span {
+    font-family: Hack;
+    background-color: green;
+}
+.progress-purple span {
+    font-family: Hack;
+    background-color: indigo;
+}
+.progress-red span {
+    font-family: Hack;
+    background-color: red;
+}
+
+.book-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
 }
